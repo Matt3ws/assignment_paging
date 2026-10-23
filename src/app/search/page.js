@@ -1,9 +1,12 @@
+import { Suspense } from 'react';
 import ImageSearch from '@/components/search/imageSearch/imageSearch';
 import styles from './page.module.css';
 const Page = () => {
   return (
     <div className={styles.page}>
-      <ImageSearch></ImageSearch>
+      <Suspense>
+        <ImageSearch></ImageSearch>
+      </Suspense>
     </div>
   );
 };
